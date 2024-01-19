@@ -119,20 +119,20 @@ color:  tomato !important;
                 <div class="card-header" style="font-size: medium; font-weight:1000px;">
                 Predicting the Person Based on Payment charectrastics
                 </div>
-                <!--<div class="result" style="justify-content:center; display:flex; align-items:center; height:55vh;">-->
+                <div class="result" style="justify-content:center; display:flex; align-items:center; height:55vh;">
             
-                    <!--<h1 style="text-align: center; cursor: pointer; color: blue;">Person is:{{result}}</h1>-->
-                    {% if final_result is defined %}
+                    <h1 style="text-align: center; cursor: pointer; color: blue;">Person is:{{result}}</h1>
+                    <!--{% if final_result is defined %}
                     <div class="result" style="justify-content:center; display:flex; align-items:center; height:55vh;">
-                        {% if final_result == 0 %}
-                       <center><h1 style="text-align: center; cursor: pointer; color: blue;">No heart disease detected</h1></center>
+                        {% if result == 1 %}
+                       <h1 style="text-align: center; cursor: pointer; color: blue;">Person is Defaulter</h1>
                      {% else %}
-                        <center><h1 style="text-align: center; cursor: pointer; color: blue;">Suffering from heart disease</h1></center>
+                        <h1 style="text-align: center; cursor: pointer; color: blue;">Person is not Defaulter</h1>
                      {% endif %}
                      </div>
                     {% endif %}
                     
-                </div>
+                </div>-->
             </div>
         </div>
 

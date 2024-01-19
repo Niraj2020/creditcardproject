@@ -4,10 +4,13 @@ from src.CreditCard.pipeline.Prediction_pipeline import CustomData, PredictPipel
 app = Flask(__name__)
 
 
+@app.route('/', methods=['GET', 'POST'])
+def home():
 
+    return render_template('home.html') 
 # Define the home route
 
-@app.route("/",methods=["GET","POST"])
+@app.route("/predict",methods=["GET","POST"])
 def predict_datapoint():
     if request.method == "GET":
         return render_template("home.html")
@@ -48,13 +51,13 @@ def predict_datapoint():
         pred=predict_pipeline.predict(final_data)
         
         result=round(pred[0],2)
-        #if pred[0]==1:
-                #result ='Person is not Healthy as suffering with Kidney Disease'
+        if pred==1:
+               result ='Defaulter'
                 
-        #else:
-               # result='Person is Healthy, Do not have Kidney Disease'
+        else:
+               result='not Defaulter'
         
-        return render_template("result.html",final_result=result)
+        return render_template("result.html",result=result)
      
         
 @app.route('/about', methods=['GET', 'POST'])
@@ -62,9 +65,8 @@ def about():
 
     return render_template('about.html')  
 
-@app.route('/predict', methods=['GET', 'POST'])
-def predict():
-    return render_template('result.html')  
+ 
+
     
 
 #execution begin
