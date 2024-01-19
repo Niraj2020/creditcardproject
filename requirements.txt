@@ -1,0 +1,16 @@
+flask
+gunicorn==20.0.4
+matplotlib
+seaborn
+pandas
+numpy
+scikit_learn
+xgboost
+python-dateutil
+Jinja2
+importlib-resources
+importlib-metadata
+contourpy
+click
+flask_cors
+joblib
